@@ -1,0 +1,290 @@
+*{
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+}
+:root{
+  --primary-color:#fcf5e9;
+  --container-normal:1100px;
+  --container-wide:1400px;
+  --container-narrow:900px;
+  --dark-color: #333;
+}
+/* Utility */
+.bg-primary{
+  background-color: var(--primary-color);
+  color:#333;
+  padding : 0.5rem 0.5rem;
+}
+
+.bg-dark{
+  background-color: var(--dark-color);
+  color:#fff;
+}
+
+.btn{
+  display: inline-block;
+  padding:1rem 2rem;
+  border: 1px solid #333;
+  background: transparent;
+  margin-top: 2rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: #333;
+  color: #fff;
+
+}
+.section-heading{
+  margin-bottom: 1.4rem;
+  text-align: center;
+  font-size: 1.6rem;
+  padding-top: 10px;
+}
+body{
+  font-family: 'Open Sans','Sans Seriff';
+  line-height: 1.6;
+}
+
+a{
+  text-decoration: None;
+  color :#333;
+}
+
+ul{
+  list-style-type: None;
+}
+
+img{
+  max-width: 100%;
+}
+
+/* container */
+.container{
+  max-width: var(--container-normal);
+  margin: 0 auto ;
+  padding: 0 1.5rem;
+
+  
+
+}
+
+.container-lg{
+  max-width: var(--container-wide);
+}
+
+.container-sm{
+  max-width: var(--container-normal);
+}
+
+/* Header */
+
+.header .logo{
+
+  width: 130px;
+}
+
+.header .header-flex{
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .main-menu{
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header{
+  margin: 1.5rem auto;
+  padding : 0.5rem 1rem;
+}
+
+.header .main-menu a{
+  padding: 0.5rem 1rem;
+}
+
+.header .main-menu a:hover{
+  background-color: var(--primary-color)
+}
+
+.header .main-menu .current{
+  background-color: var(--primary-color)
+}
+
+.hero{
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.hero h2{
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+/* Gallery */
+.gallery-flex{
+  display: flex;  
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:20px
+}
+
+.gallery-item{
+  width: calc(33.333% - 20px);
+  border-radius: 10px;
+}
+.gallery-item img{
+  border-radius: 10px;
+
+}
+.gallery-item:hover{
+  opacity: 0.5;
+}
+/* Footer */
+.footer{
+    border-top: solid #aaa ;
+    padding: 10px 0;
+    margin: 20px 0;
+}
+
+.footer .footer-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.footer-flex img{
+  width: 120px;
+  height: 35px;
+  margin-bottom: 1.4rem;
+  
+  
+}
+.footer h4{
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+/* Services */
+.services{
+  background-color: #aaa;
+  color: #fff ;
+  padding: 10px auto;
+  padding-bottom: 20px;
+
+}
+.services-flex{
+  display: flex;
+  gap: 1.2rem;
+
+}
+
+.services-items h4{
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+/* Team  */
+.team{
+  
+  padding: 10px 10px;
+  padding-bottom: 20px;
+}
+
+.team-flex{
+  display:flex;
+  gap:1.4rem;
+  padding: 20px auto;
+
+}
+
+.team-item img { 
+ border-radius: 10px;
+ padding: auto 1px;
+}
+
+/* Visually Hidden */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/* contact */
+.contact{
+  padding: 3rem 0rem 4rem;
+}
+.contact .contact-header{
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 1rem;
+  
+}
+.contact p{
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+.form-group{
+  margin: 2rem 0;
+}
+
+.contact input,
+.contact textarea{
+  border:None;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 1.4rem;
+  width: 100%;
+ 
+}
+.contact input:focus,
+.contact textarea:focus{
+  outline:0
+
+}
+
+.contact textarea{
+  height:150px
+
+}
+
+.contact button{
+  width: 100%;
+}
+
+
+@media(max-width : 768px) {
+  
+  .header .header-flex,
+  .services .services-flex,
+  .team .team-flex{
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero{
+    height: 300px;
+  }
+  .hero h2{
+    font-size: 2rem;
+  }
+
+  .gallery-item{
+    width: calc(45% - 20px);
+  }
+
+  .footer-flex{
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+
