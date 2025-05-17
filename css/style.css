@@ -172,8 +172,8 @@ img{
 }
 /* Services */
 .services{
-  background-color: #aaa;
-  color: #fff ;
+  background-color:var(--dark-color);
+  color: var(--primary-color) ;
   padding: 10px auto;
   padding-bottom: 20px;
 
